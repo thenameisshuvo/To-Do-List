@@ -53,7 +53,7 @@ form {
 }
 
 #add-button {
-  background-color:#C24641;
+  background-color: #C24641;
   color: white;
   font-size: 1rem;
   padding: 1rem 1rem;
@@ -64,8 +64,29 @@ form {
   width: 20%;
   position: relative;
   left: 50%;
-  transform: translateX(-70%);
+  transform: translateX(-50%);
   transition: background-position 0.5s, box-shadow 0.5s;
+}
+
+/* Responsive button size and font-size adjustments for mobile devices */
+@media screen and (max-width: 768px) {
+  #add-button {
+    width: 60%; /* Button width will take up 60% of the screen width */
+    font-size: 0.9rem; /* Slightly smaller font for mobile */
+    padding: 0.8rem 1rem; /* Adjust padding for smaller screens */
+    left: 50%;
+    transform: translateX(-50%); /* Center the button horizontally */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #add-button {
+    width: 80%; /* Button width will take up 80% of the screen width */
+    font-size: 0.8rem; /* Even smaller font size for very small screens */
+    padding: 0.6rem 1rem; /* Reduce padding for extra small screens */
+    left: 50%;
+    transform: translateX(-50%); /* Keep button centered */
+  }
 }
 
 #add-button:hover {
@@ -182,6 +203,7 @@ body.light-mode .todos li.completed {
   color: #C24641;
   text-decoration-color: black;
 }
+
 .todos li:hover {
   background-color: #f4f4f4;
   cursor: pointer;
@@ -255,4 +277,3 @@ input[type="checkbox"] + label:before {
 input[type="checkbox"]:checked + label:before {
   background: #FF6F61;
 }
-
